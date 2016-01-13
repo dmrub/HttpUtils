@@ -82,6 +82,7 @@ public:
         {
             matchers_ = std::move(other.matchers_);
         }
+        return *this;
     }
 
     class Context

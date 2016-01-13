@@ -258,12 +258,14 @@ PathFunction & PathFunction::operator=(const PathFunction &other)
 {
     tokens_ = other.tokens_;
     copyMatchesFrom(other);
+    return *this;
 }
 
 PathFunction & PathFunction::operator=(PathFunction &&other)
 {
     tokens_ = std::move(other.tokens_);
     matches_ = std::move(other.matches_);
+    return *this;
 }
 
 void PathFunction::init()
